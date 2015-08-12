@@ -445,7 +445,7 @@ void music()
   {
       if( wiringPiISR( 29, INT_EDGE_RISING,  ) )
       {
-        jumbDual();
+        jumpDual();
       }
   }
 }
