@@ -23,6 +23,8 @@ using namespace std;
 
 int main()
 {
+  cout << "This program is licensed under GNU GPL. See http://www.gnu.org/licenses/#GPL for more informations" << endl;
+
   initPins();
 
   while( true )
