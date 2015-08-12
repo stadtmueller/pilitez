@@ -28,10 +28,10 @@ int main()
   initPins();
   for( int i : pins2 )
   {
-    cout << i << " ist jetzt HIGH" << endl;
+    cout << i << " is now HIGH" << endl;
     digitalWrite( i, HIGH );
 
-    cout << "Enter-Taste drücken um das nächste Licht zu aktivieren" << endl;
+    cout << "Press Enter to activate next light" << endl;
 
     if( cin.get() == '\n' )
     {
