@@ -29,12 +29,12 @@ void initPins()
   for( int i : pins )
     pinMode( i, OUTPUT );
 
-  cout << "Init abgeschlossen" << endl << endl;
+  cout << "Init done" << endl << endl;
 }
 
 void randomLights( int cnt )
 {
-  cout << "Zufall: ";
+  cout << "Random: ";
 
   int randomNum = 0;
   int last = 0;
@@ -109,7 +109,7 @@ void revDual( int cnt )
 
 void outIn2()
 {
-  cout << "Aussen Innen" << endl;
+  cout << "Outside Inside" << endl;
 
   int ix = 0;
   int ix2 = SIZE - 1;
@@ -130,7 +130,7 @@ void outIn2()
 
 void inOut2()
 {
-  cout << "Innen Aussen" << endl;
+  cout << "Inside Outside" << endl;
   int ix = SIZE / 2;
   int ix2 = ( SIZE / 2 ) - 1;
 
@@ -150,7 +150,7 @@ void inOut2()
 
 void allOn()
 {
-  //cout << "Alle an" << endl;
+  //cout << "All on" << endl;
 
   for( int i : pins )
     digitalWrite( i, HIGH );
@@ -158,7 +158,7 @@ void allOn()
 
 void allOf()
 {
-  //cout << "Alle aus" << endl;
+  //cout << "Alle off" << endl;
 
   for( int i : pins )
     digitalWrite( i, LOW );
@@ -194,7 +194,7 @@ void knightRiderLights( int cnt )
 
 void pattern1( long int millis )
 {
-  cout << "Muster 1 @ " << millis << "ms" << endl;
+  cout << "Pattern 1 @ " << millis << "ms" << endl;
 
   int max = SIZE - 1;
 
@@ -212,7 +212,7 @@ void pattern1( long int millis )
 
 void revPattern1( long int millis /* = 400 */ )
 {
-   cout << "Rev-Muster 1 @ " << millis << "ms" << endl;
+   cout << "Rev-Pattern 1 @ " << millis << "ms" << endl;
 
   int max = SIZE - 1;
 
@@ -230,7 +230,7 @@ void revPattern1( long int millis /* = 400 */ )
 
 void pattern2( long int millis )
 {
-  cout << "Muster 2 @ " << millis << "ms" << endl;
+  cout << "Pattern 2 @ " << millis << "ms" << endl;
 
   int j = 0;
   int i = 2;
@@ -249,7 +249,7 @@ void pattern2( long int millis )
 
 void revPattern2( long int millis )
 {
-  cout << "Rev-Muster 2 @ " << millis << "ms" << endl;
+  cout << "Rev-Pattern 2 @ " << millis << "ms" << endl;
 
   int j = SIZE - 1;
   int i = j - 2;
@@ -268,7 +268,7 @@ void revPattern2( long int millis )
 
 void pattern3()
 {
-  cout << "Muster 3" << endl;
+  cout << "Pattern 3" << endl;
 
   int ix = -1;
 
@@ -287,7 +287,7 @@ void pattern3()
 
 void revPattern3()
 {
-  cout << "Rev-Muster 3" << endl;
+  cout << "Rev-Pattern 3" << endl;
 
   int ix = SIZE -1;
 
@@ -306,7 +306,7 @@ void revPattern3()
 
 void strobe( int cnt )
 {
-  cout << "Strobo" << endl;
+  cout << "Strobe" << endl;
 
   int i = 0;
 
@@ -356,7 +356,7 @@ void vu( int cnt )
 
 void blueStrobe( int cnt )
 {
-  cout << "Blaues Strobo" << endl;
+  cout << "Blue Strobe" << endl;
 
   int i = 0;
   while( i < cnt )
@@ -373,7 +373,7 @@ void blueStrobe( int cnt )
 
 void greenStrobe( int cnt )
 {
-  cout << "Grünes Strobo" << endl;
+  cout << "Green Strobe" << endl;
 
   int i = 0;
   while( i < cnt )
@@ -390,7 +390,7 @@ void greenStrobe( int cnt )
 
 void yellowStrobe( int cnt )
 {
-  cout << "Gelbes Strobo" << endl;
+  cout << "Yellow Strobe" << endl;
   int i = 0;
   while( i < cnt )
   {
@@ -406,7 +406,7 @@ void yellowStrobe( int cnt )
 
 void redStrobe( int cnt )
 {
-  cout << "Rotes Strobo" << endl;
+  cout << "Red Strobe" << endl;
 
   int i = 0;
   while( i < cnt )
@@ -437,7 +437,7 @@ void redStrobe( int cnt )
   }
 void music()
 {
-  cout << "Musik" << endl;
+  cout << "Music" << endl;
 
   int ix = -1;
 
