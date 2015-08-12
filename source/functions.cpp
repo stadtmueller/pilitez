@@ -29,8 +29,6 @@ void initPins()
   for( int i : pins )
     pinMode( i, OUTPUT );
 
-  pinMode( 29, INPUT );
-
   cout << "Init abgeschlossen" << endl << endl;
 }
 
@@ -423,6 +421,20 @@ void redStrobe( int cnt )
   }
 }
 
+  void jumpDual()
+  {
+    static int ix = -2;
+
+    if( lastIndex2 <= SIZE )
+    {
+      digitalWrite( pins[ ix ], LOW );
+      digitalWrite( pins[ ix + 1 ], LOW );
+
+      digitalWrite( pins[ ix + 2 ], HIGH );
+      digitalWrite( pins[ ix + 3 ], HIGH );
+    }
+    ix + 2;
+  }
 void music()
 {
   cout << "Musik" << endl;
@@ -431,14 +443,9 @@ void music()
 
   while( ix <= SIZE )
   {
-      if( waitForInterrupt( 29, -1 ) )
+      if( wiringPiISR( 29, INT_EDGE_RISING,  ) )
       {
-        digitalWrite( pins[ ix ], HIGH );
-        digitalWrite( pins[ ix + 1 ], HIGH );
-        delay( 400 );
-        digitalWrite( pins[ ix ], LOW );
-        digitalWrite( pins[ ix + 1 ], LOW );
-        ix++;
+        jumbDual();
       }
   }
 }
