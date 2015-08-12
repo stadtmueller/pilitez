@@ -34,4 +34,6 @@ void redStrobe( int cnt );
 
 void vu( int cnt );
 
+void music();
+
 #endif
