@@ -29,6 +29,8 @@ void initPins()
   for( int i : pins )
     pinMode( i, OUTPUT );
 
+  pinMode( 29, INPUT );
+
   cout << "Init abgeschlossen" << endl << endl;
 }
 
@@ -418,5 +420,25 @@ void redStrobe( int cnt )
     digitalWrite( pins[ 7 ], LOW );
     delay( strobeClock );
     i++;
+  }
+}
+
+void music()
+{
+  cout << "Musik" << endl;
+
+  int ix = -1;
+
+  while( ix <= SIZE )
+  {
+      if( waitForInterrupt( 29, -1 ) )
+      {
+        digitalWrite( pins[ ix ], HIGH );
+        digitalWrite( pins[ ix + 1 ], HIGH );
+        delay( 400 );
+        digitalWrite( pins[ ix ], LOW );
+        digitalWrite( pins[ ix + 1 ], LOW );
+        ix++;
+      }
   }
 }
