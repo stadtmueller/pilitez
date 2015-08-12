@@ -15,7 +15,6 @@ This file is part of PiLitez.
     along with PiLitez.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-
 #include "functions.h"
 #include <iostream>
 #include <wiringPi.h>
