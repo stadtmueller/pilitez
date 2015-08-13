@@ -17,7 +17,6 @@ This file is part of PiLitez.
 
 #include "jumpFunctions.h"
 #include <wiringPi.h>
-#include <stdlib.h>
 
 using namespace std;
 
