@@ -437,32 +437,3 @@ void redStrobe( int cnt )
     i++;
   }
 }
-
-  void jumpDual()
-  {
-    static int ix = -2;
-
-    if( ix <= SIZE )
-    {
-      digitalWrite( pins[ ix ], LOW );
-      digitalWrite( pins[ ix + 1 ], LOW );
-
-      digitalWrite( pins[ ix + 2 ], HIGH );
-      digitalWrite( pins[ ix + 3 ], HIGH );
-    }
-    ix += 2;
-  }
-void music()
-{
-  cout << "Music" << endl;
-
-  int ix = -1;
-
-  while( ix <= SIZE )
-  {
-      if( wiringPiISR( 29, INT_EDGE_RISING, jumpDual ) )
-      {
-        jumpDual();
-      }
-  }
-}
