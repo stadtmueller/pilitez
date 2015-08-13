@@ -36,3 +36,10 @@ If you have done changes in the files run:
   g++ -Wall -o main main.cpp functions.cpp -lwiringPi -std=c++0x
   
 The Wiring Pi library is required: wiringpi.com/
+
+!!!
+
+Please note that the binary files in the "compiled/" folder are examples and often not up to date.
+If you've downloaded the repo, go to the source folder and compile it with the command above.
+
+!!!
