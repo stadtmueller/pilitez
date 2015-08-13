@@ -19,6 +19,7 @@ This file is part of PiLitez.
 #include <random>
 #include <wiringPi.h>
 #include "functions.h"
+#include <stdlib.h>
 
 using namespace std;
 
@@ -45,6 +46,8 @@ void initPins()
 
   for( int i : pins )
     pinMode( i, OUTPUT );
+
+  system( "gpio edge 29 rising" );
 
   cout << "Init done" << endl << endl;
 }
