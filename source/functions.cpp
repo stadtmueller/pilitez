@@ -450,7 +450,7 @@ void redStrobe( int cnt )
       digitalWrite( pins[ ix + 2 ], HIGH );
       digitalWrite( pins[ ix + 3 ], HIGH );
     }
-    ix + 2;
+    ix += 2;
   }
 void music()
 {
