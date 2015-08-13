@@ -442,7 +442,7 @@ void redStrobe( int cnt )
   {
     static int ix = -2;
 
-    if( lastIndex2 <= SIZE )
+    if( ix <= SIZE )
     {
       digitalWrite( pins[ ix ], LOW );
       digitalWrite( pins[ ix + 1 ], LOW );
