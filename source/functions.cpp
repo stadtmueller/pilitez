@@ -460,7 +460,7 @@ void music()
 
   while( ix <= SIZE )
   {
-      if( wiringPiISR( 29, INT_EDGE_RISING,  ) )
+      if( wiringPiISR( 29, INT_EDGE_RISING, jumpDual ) )
       {
         jumpDual();
       }
