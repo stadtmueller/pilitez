@@ -28,9 +28,9 @@ int gloClock = 400;
 
 long int random()
 {
-  std::random_device rd;
-  std::mt19937 eng( rd() );
-  std::uniform_int_distribution<> distr( 0, SIZE );
+  random_device rd;
+  mt19937 eng( rd() );
+  uniform_int_distribution<> distr( 0, SIZE );
   int num = distr( eng );
   cout << num << " ";
 
