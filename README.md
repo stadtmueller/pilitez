@@ -23,8 +23,14 @@ functions.h:
   Header file for functions.cpp
   
 functions.cpp:
-  Source file which contains all the functions
+  Source file which contains all the functions regardless of the music
   
+jumpFunctions.h
+  Header file for jumpFunctions.cpp
+
+jumpFunctions.cpp
+  Source file which contains music-driven functions
+
 main.cpp:
   Main programm
   
