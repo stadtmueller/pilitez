@@ -21,6 +21,20 @@ This file is part of PiLitez.
 
 using namespace std;
 
+void initPins()
+{
+  cout << "Init..." << endl;
+
+  wiringPiSetup();
+
+  for( int i : pins )
+    pinMode( i, OUTPUT );
+
+  system( "gpio edge 29 rising" );
+
+  cout << "Init done" << endl << endl;
+}
+
 int main()
 {
   cout << "This program is licensed under GNU GPL. See http://www.gnu.org/licenses/#GPL for more informations" << endl;
