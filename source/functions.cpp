@@ -24,8 +24,6 @@ This file is part of PiLitez.
 using namespace std;
 
 int pins[ SIZE ] = { 0, 2, 3, 21, 22, 23, 24, 25 };
-int strobeClock = 100;
-int gloClock = 400;
 
 long int random()
 {
@@ -55,7 +53,7 @@ void randomLights( int cnt )
     else
       currentPin = pins[ randomNum ];
     digitalWrite( currentPin, HIGH );
-    delay( gloClock );
+    delay( 400 );
     digitalWrite( currentPin, LOW );
     last = randomNum;
     i++;
@@ -76,7 +74,7 @@ void dualLights2( int cnt )
       digitalWrite( pins[ ix ], HIGH );
       digitalWrite( pins[ ix + 1 ], HIGH );
 
-      delay( gloClock * 2 );
+      delay( 800 );
 
       digitalWrite( pins[ ix ], LOW );
       digitalWrite( pins[ ix + 1 ], LOW );
@@ -100,7 +98,7 @@ void revDual( int cnt )
       digitalWrite( pins[ ix ], HIGH );
       digitalWrite( pins[ ix - 1 ], HIGH );
 
-      delay( gloClock * 2 );
+      delay( 800 );
 
       digitalWrite( pins[ ix ], LOW );
       digitalWrite( pins[ ix - 1 ], LOW );
@@ -125,7 +123,7 @@ void outIn2()
     digitalWrite( pins[ ix ], HIGH );
     digitalWrite( pins[ ix2 ], HIGH );
 
-    delay( gloClock );
+    delay( 400 );
 
     digitalWrite( pins[ ix ], LOW );
     digitalWrite( pins[ ix2 ], LOW );
@@ -145,7 +143,7 @@ void inOut2()
     digitalWrite( pins[ ix ], HIGH );
     digitalWrite( pins[ ix2 ], HIGH );
 
-    delay( gloClock );
+    delay( 400 );
 
     digitalWrite( pins[ ix ], LOW );
     digitalWrite( pins[ ix2 ], LOW );
@@ -181,7 +179,7 @@ void knightRiderLights( int cnt )
     for( int j = 0; j < SIZE - 1; j++ )
     {
       digitalWrite( pins[ j ], HIGH );
-      delay( gloClock / 2 );
+      delay( 200 );
       if( j != 8 )
         digitalWrite( pins[ j ], LOW );
     }
@@ -191,7 +189,7 @@ void knightRiderLights( int cnt )
     for( int i = SIZE - 1; i >= 0; i-- )
     {
       digitalWrite( pins[ i ], HIGH );
-      delay( gloClock / 2 );
+      delay( 200 );
       digitalWrite( pins[ i ], LOW );
     }
     i++;
@@ -319,7 +317,7 @@ void strobe( int cnt )
   while( i <= cnt )
   {
     allOn();
-    delay( strobeClock );
+    delay( 100 );
     allOf();
     delay( 100 );
     i++;
@@ -369,10 +367,10 @@ void blueStrobe( int cnt )
   {
     digitalWrite( pins[ 3 ], HIGH );
     digitalWrite( pins[ 4 ], HIGH );
-    delay( strobeClock );
+    delay( 100 );
     digitalWrite( pins[ 3 ], LOW );
     digitalWrite( pins[ 4 ], LOW );
-    delay( strobeClock );
+    delay( 100 );
     i++;
   }
 }
@@ -386,10 +384,10 @@ void greenStrobe( int cnt )
   {
     digitalWrite( pins[ 2 ], HIGH );
     digitalWrite( pins[ 5 ], HIGH );
-    delay( strobeClock );
+    delay( 100 );
     digitalWrite( pins[ 2 ], LOW );
     digitalWrite( pins[ 5 ], LOW );
-    delay( strobeClock );
+    delay( 100 );
     i++;
   }
 }
@@ -402,10 +400,10 @@ void yellowStrobe( int cnt )
   {
     digitalWrite( pins[ 1 ], HIGH );
     digitalWrite( pins[ 6 ], HIGH );
-    delay( strobeClock );
+    delay( 100 );
     digitalWrite( pins[ 1 ], LOW );
     digitalWrite( pins[ 6 ], LOW );
-    delay( strobeClock );
+    delay( 100 );
     i++;
   }
 }
@@ -419,10 +417,10 @@ void redStrobe( int cnt )
   {
     digitalWrite( pins[ 0 ], HIGH );
     digitalWrite( pins[ 7 ], HIGH );
-    delay( strobeClock );
+    delay( 100 );
     digitalWrite( pins[ 0 ], LOW );
     digitalWrite( pins[ 7 ], LOW );
-    delay( strobeClock );
+    delay( 100 );
     i++;
   }
 }
