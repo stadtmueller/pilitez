@@ -16,13 +16,14 @@ This file is part of PiLitez.
 */
 
 #include "NoMusic.h"
+#include "Music.h"
 #include <iostream>
 #include <wiringPi.h>
 #include <stdlib.h>
 
 using namespace std;
 
-void initPins()
+void initPins( int pins[] )
 {
   cout << "Init..." << endl;
 
@@ -40,7 +41,12 @@ int main()
 {
   cout << "This program is licensed under GNU GPL. See http://www.gnu.org/licenses/#GPL for more informations" << endl;
 
+  int pins[ SIZE ] = { 0, 2, 3, 21, 22, 23, 24, 25 };
+
   initPins();
+
+  Music music = Music( pins );
+  NoMusic noMusic = NoMusic( pins );
 
   while( true )
   {
