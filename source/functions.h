@@ -20,7 +20,6 @@ This file is part of PiLitez.
 
 #define SIZE 8
 
-void initPins();
 void randomLights( int cnt );
 
 void dualLights2( int cnt );
