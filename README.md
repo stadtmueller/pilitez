@@ -41,7 +41,7 @@ main:
 If you have done changes in the files run:
   g++ -Wall -o main main.cpp functions.cpp -lwiringPi -std=c++0x
   
-The Wiring Pi library is required: wiringpi.com/
+The Wiring Pi library is required to compile PiLitez: wiringpi.com/
 
 !!!
 
