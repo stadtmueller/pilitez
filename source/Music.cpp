@@ -15,14 +15,18 @@ This file is part of PiLitez.
     along with PiLitez.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "jumpFunctions.h"
+#include "Music.h"
 #include <wiringPi.h>
 
 using namespace std;
 
 int pins[ SIZE ] = { 0, 2, 3, 21, 22, 23, 24, 25 };
 
-void jumpDual()
+Music::Music( int pins_[] ):
+  pins_( pins );
+  {}
+
+void Music::jumpDual()
 {
   static int ix = -2;
 
