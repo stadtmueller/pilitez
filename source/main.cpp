@@ -18,6 +18,7 @@ This file is part of PiLitez.
 #include "NoMusic.h"
 #include <iostream>
 #include <wiringPi.h>
+#include <stdlib.h>
 
 using namespace std;
 
