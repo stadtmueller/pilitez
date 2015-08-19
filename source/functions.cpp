@@ -36,6 +36,9 @@ long int random()
   return num;
 }
 
+NoMusic::NoMusic( int[ SIZE ] pins_ ):
+  pins( pins_ );
+  {}
 
 void NoMusic::randomLights( int cnt )
 {
