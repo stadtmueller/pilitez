@@ -7,6 +7,7 @@ class Pin
     Pin( int number );
     int getNumber();
     bool getState();
+    void set( bool high );
   private:
     int number_;
     bool state;
