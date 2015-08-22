@@ -51,61 +51,61 @@ int main()
   while( true )
   {
     cout << "1: ";
-    dualLights2( 2 );
+    noMusic.dualLights2( 2 );
 
     cout << "2: ";
-    outIn2();
+    noMusic.outIn2();
 
     cout << "3: ";
-    strobe( 5 );
+    noMusic.strobe( 5 );
 
     cout << "4: ";
-    inOut2();
+    noMusic.inOut2();
 
     cout << "5: ";
-    randomLights( 15 );
+    noMusic.randomLights( 15 );
 
     cout << "6: ";
-    pattern1();
+    noMusic.pattern1();
 
     cout << "7: ";
-    pattern1( 200 );
+    noMusic.pattern1( 200 );
 
     cout << "8: ";
-    pattern2();
+    noMusic.pattern2();
 
     cout << "9: ";
-    revDual( 2 );
+    noMusic.revDual( 2 );
 
     cout << "10: ";
-    revPattern1();
+    noMusic.revPattern1();
 
     cout << "11: ";
-    revPattern2();
+    noMusic.revPattern2();
 
     cout << "12: ";
-    pattern3();
+    noMusic.pattern3();
 
     cout << "13: ";
-    revPattern3();
+    noMusic.revPattern3();
 
     cout << "14: ";
-    knightRiderLights( 3 );
+    noMusic.knightRiderLights( 3 );
 
     cout << "15: ";
-    vu( 2 );
+    noMusic.vu( 2 );
 
     cout << "16: ";
-    redStrobe( 4 );
+    noMusic.redStrobe( 4 );
 
     cout << "17: ";
-    blueStrobe( 4 );
+    noMusic.blueStrobe( 4 );
 
     cout << "18: ";
-    greenStrobe( 4 );
+    noMusic.greenStrobe( 4 );
 
     cout << "19: ";
-    yellowStrobe( 4 );
+    noMusic.yellowStrobe( 4 );
 
     cout << "----------------------------" << endl;
   }

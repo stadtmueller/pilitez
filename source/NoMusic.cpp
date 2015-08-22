@@ -19,6 +19,7 @@ This file is part of PiLitez.
 #include <random>
 #include <wiringPi.h>
 #include "NoMusic.h"
+#include "Pin.h"
 
 using namespace std;
 
