@@ -18,6 +18,13 @@ This file is part of PiLitez.
 #include "Pin.h"
 #include <wiringPi.h>
 
+void initPins( Pin[] pins )
+{
+  for( Pin pin : pins )
+    pinMode( pin.getNumber(), OUTPUT );
+}
+
+
 Pin::Pin( int number, bool output ):
   number_( number )
   {
