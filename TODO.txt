@@ -6,3 +6,6 @@ TODO:
      ->Modify NoMusic.cpp ( )
 ---------------------------------------
 
+( )-> Add init methodes( int, int[] for wiringPi pin numbers ) to Pin.*
+     ->Add to files                ( )
+     ->Remove initPins from main() ( )
