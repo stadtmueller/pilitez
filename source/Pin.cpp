@@ -21,17 +21,17 @@ This file is part of PiLitez.
 Pin::Pin( int number ):
   number_( number )
   {
-    this.state = false;
+    this->state = false;
   }
 
 int Pin::getNumber()
 {
-  return this.number;
+  return this->number;
 }
 
 bool Pin::getState()
 {
-  return this.state;
+  return this->state;
 }
 
 void Pin::set( bool high )
