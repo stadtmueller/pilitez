@@ -16,3 +16,11 @@ bool Pin::getState()
 {
   return this.state;
 }
+
+void Pin::set( bool high )
+{
+  if( high )
+    digitalWrite( this->number_, HIGH );
+  else
+    digitalWrite( this->number_, LOW );
+}
