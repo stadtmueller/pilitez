@@ -18,7 +18,7 @@ This file is part of PiLitez.
 #include "Pin.h"
 #include <wiringPi.h>
 
-Pin::Pin( int number ):
+Pin::Pin( int number, bool output ):
   number_( number )
   {
     this->state = false;
@@ -51,13 +51,3 @@ bool Pin::get()
  
   return b;
 }
-  
-
-
-
-
-
-
-
-
-
