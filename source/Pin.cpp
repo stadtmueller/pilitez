@@ -1,4 +1,5 @@
 #include "Pin.h"
+#include <wiringPi.h>
 
 Pin::Pin( int number ):
   number_( number )
