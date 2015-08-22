@@ -41,13 +41,3 @@ void Pin::set( bool high )
   else
     digitalWrite( this->number_, LOW );
 }
-
-bool Pin::get()
-{
-  bool b = false;
-
-  if( digitalRead( this->number_ ) )
-    b = true;
- 
-  return b;
-}

@@ -27,7 +27,6 @@ class Pin
     int getNumber();         // getNumber(): Returns the wiringPi number of that Pin
     bool getState();         // getState():  Returns either true( pin is HIGH ) or false( pin is LOW )
     void set( bool high );   // set():       Sets a state( high=true:HIGH -- high=false:LOW ) ( Output pins only )
-    bool get();
   private:
     int number_;
     bool state;
