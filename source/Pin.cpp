@@ -20,7 +20,12 @@ This file is part of PiLitez.
 
 void initPins()
 {
-  
+  cout << "Init..." << endl;
+
+  wiringPiSetup();
+  system( "gpio edge 29 rising" );
+
+  cout << "Init done" << endl << endl;
 }
 
 

@@ -25,16 +25,7 @@ using namespace std;
 
 void initPins( int pins[] )
 {
-  cout << "Init..." << endl;
-
-  wiringPiSetup();
-
-  for( int i : pins )
-    pinMode( i, OUTPUT );
-
-  system( "gpio edge 29 rising" );
-
-  cout << "Init done" << endl << endl;
+  
 }
 
 int main()
