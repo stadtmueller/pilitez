@@ -25,6 +25,9 @@ void initPins( int pins[] )
   wiringPiSetup();
   system( "gpio edge 29 rising" );
 
+  for( int i : pins )
+    pinMode( i, OUTPUT );          // <-- Add "Pin"-call here and buffer it in array
+
   cout << "Init done" << endl << endl;
 }
 
