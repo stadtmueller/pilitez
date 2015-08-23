@@ -32,7 +32,7 @@ int main()
 
   initPins( pins );
 
-  Music music = Music( pins );
+  //Music music = Music( pins );
   NoMusic noMusic = NoMusic( pins );
 
   while( true )
