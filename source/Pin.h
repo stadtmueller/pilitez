@@ -18,7 +18,7 @@ This file is part of PiLitez.
 #ifndef PIN_H
 #define PIN
 
-void initPins();
+void initPins( int pins[] );
 
 class Pin
 {
