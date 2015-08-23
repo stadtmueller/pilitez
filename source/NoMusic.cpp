@@ -34,9 +34,11 @@ long int random()
   return num;
 }
 
-NoMusic::NoMusic( int pins_[] ):
-  pins( pins_ )
-  {}
+NoMusic::NoMusic( int pins_[] )
+{
+  for( int i = 0; i < SIZE; i++ )
+    this->pins[ i ] = pins_[ i ];
+}
 
 void NoMusic::randomLights( int cnt )
 {
