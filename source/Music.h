@@ -23,9 +23,9 @@ This file is part of PiLitez.
 class Music
 {
   public:
-    Music( int pins_[] )
+    Music( int pins_[] );
     void jumpDual();
   private:
     int pins[ SIZE ];
-
+};
 #endif
