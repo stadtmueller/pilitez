@@ -20,12 +20,11 @@ This file is part of PiLitez.
 
 void initPins()
 {
-  for( Pin pin : pins )
-    pinMode( pin.getNumber(), OUTPUT );
+  
 }
 
 
-Pin::Pin( int number, bool output ):
+Pin::Pin( int number ):
   number_( number )
   {
     pinMode( this->number_, OUTPUT );
