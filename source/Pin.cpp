@@ -18,7 +18,7 @@ This file is part of PiLitez.
 #include "Pin.h"
 #include <wiringPi.h>
 
-void initPins( Pin[] pins )
+void initPins()
 {
   for( Pin pin : pins )
     pinMode( pin.getNumber(), OUTPUT );
