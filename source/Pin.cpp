@@ -17,6 +17,9 @@ This file is part of PiLitez.
 
 #include "Pin.h"
 #include <wiringPi.h>
+#include <iostream>
+
+using namespace std;
 
 void initPins( int pins[] )
 {

@@ -18,6 +18,8 @@ This file is part of PiLitez.
 #ifndef PIN_H
 #define PIN
 
+#define SIZE 8
+
 void initPins( int pins[] );
 
 class Pin
