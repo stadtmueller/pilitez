@@ -20,8 +20,6 @@ This file is part of PiLitez.
 
 using namespace std;
 
-int pins[ SIZE ] = { 0, 2, 3, 21, 22, 23, 24, 25 };
-
 Music::Music( int pins_[] ):
   pins( pins_ )
   {}
