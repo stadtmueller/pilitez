@@ -23,11 +23,6 @@ This file is part of PiLitez.
 
 using namespace std;
 
-void initPins( int pins[] )
-{
-  
-}
-
 int main()
 {
   cout << "This program is licensed under GNU GPL. See http://www.gnu.org/licenses/#GPL for more informations" << endl;
