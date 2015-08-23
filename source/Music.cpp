@@ -20,9 +20,11 @@ This file is part of PiLitez.
 
 using namespace std;
 
-Music::Music( int pins_[] ):
-  pins( pins_ )
-  {}
+Music::Music( int pins_[] )
+{
+  for( int i = 0; i < SIZE; i++ )
+    this->pins[ i ] = pins_[ i ];
+}
 
 void Music::jumpDual()
 {
