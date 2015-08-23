@@ -44,7 +44,7 @@ Pin::Pin( int number ):
 
 int Pin::getNumber()
 {
-  return this->number;
+  return this->number_;
 }
 
 bool Pin::getState()
