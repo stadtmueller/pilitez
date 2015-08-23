@@ -28,6 +28,7 @@ void initPins()
 Pin::Pin( int number, bool output ):
   number_( number )
   {
+    pinMode( this->number_, OUTPUT );
     this->state = false;
   }
 
