@@ -160,16 +160,16 @@ void NoMusic::allOn()
 {
   //cout << "All on" << endl;
 
-  for( int i : pins )
-    digitalWrite( i, HIGH );
+  for( int i = 0; i < SIZE; i++ )
+    digitalWrite( pins[ i ], HIGH );
 }
 
 void NoMusic::allOf()
 {
   //cout << "Alle off" << endl;
 
-  for( int i : pins )
-    digitalWrite( i, LOW );
+  for( int i = 0; i < SIZE; i++ )
+    digitalWrite( pins[ i ], LOW );
 }
 
 void NoMusic::knightRiderLights( int cnt )
