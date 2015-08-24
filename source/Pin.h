@@ -16,7 +16,7 @@ This file is part of PiLitez.
 */
 
 #ifndef PIN_H
-#define PIN
+#define PIN_H
 
 #define SIZE 8
 
