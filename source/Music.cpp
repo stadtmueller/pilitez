@@ -43,3 +43,22 @@ void Music::jumpDual()
   ix += 2;
 }
 
+void Music::jumpRevDual()
+{
+    static int ix = SIZE + 1;
+
+  digitalWrite( pins[ ix ], LOW );
+  digitalWrite( pins[ ix - 1 ], LOW );
+
+  digitalWrite( pins[ ix - 2 ], HIGH );
+  digitalWrite( pins[ ix - 3 ], HIGH );
+
+
+  if( ix == 1 )
+  {
+    ix = SIZE + 1;
+  }
+
+  ix -= 2;
+}
+
