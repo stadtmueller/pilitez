@@ -30,17 +30,14 @@ void Music::jumpDual()
 {
   static int ix = -2;
 
-  if( digitalRead( 29 ) > 0 )
+  if( ix <= SIZE )
   {
-    if( ix <= SIZE )
-    {
-      digitalWrite( pins[ ix ], LOW );
-      digitalWrite( pins[ ix + 1 ], LOW );
+    digitalWrite( pins[ ix ], LOW );
+    digitalWrite( pins[ ix + 1 ], LOW );
 
-      digitalWrite( pins[ ix + 2 ], HIGH );
-      digitalWrite( pins[ ix + 3 ], HIGH );
-    }
-    ix += 2;
+    digitalWrite( pins[ ix + 2 ], HIGH );
+    digitalWrite( pins[ ix + 3 ], HIGH );
   }
+  ix += 2;
 }
 
