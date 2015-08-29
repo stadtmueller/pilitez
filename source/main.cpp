@@ -22,6 +22,8 @@ This file is part of PiLitez.
 #include <wiringPi.h>
 
 #define SIZE 8
+#define ISHIGH digitalRead( 29 ) > 0
+
 using namespace std;
 
 int main()
