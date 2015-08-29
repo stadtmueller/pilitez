@@ -34,7 +34,7 @@ int main()
 
   initPins( pins );
 
-  //Music music = Music( pins );
+  Music music = Music( pins );
   NoMusic noMusic = NoMusic( pins );
 
   while( true )
@@ -98,5 +98,34 @@ int main()
 
     cout << "----------------------------" << endl;
   }
+
+  int i = 0;
+
+  while( true )
+  {
+    while( i < 4 )
+    {
+      if( ISHIGH )
+      {
+        music.jumpDual();
+        delay( 100 );
+        i++;
+      }
+    }
+    i = 0;
+
+    while( i < 4 )
+    {
+      if( ISHIGH )
+      {
+        music.jumpRevDual();
+        delay( 100 );
+        i++;
+      }
+    }
+    i = 0;
+
+  }
+
   return 0;
 }
