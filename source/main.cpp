@@ -21,6 +21,7 @@ This file is part of PiLitez.
 #include <iostream>
 #include <wiringPi.h>
 
+#define SIZE 8
 using namespace std;
 
 int main()
