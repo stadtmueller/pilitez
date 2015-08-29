@@ -20,7 +20,6 @@ This file is part of PiLitez.
 #include "Pin.h"
 #include <iostream>
 #include <wiringPi.h>
-#include <stdlib.h>
 
 using namespace std;
 
