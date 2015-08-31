@@ -35,7 +35,7 @@ Pin.h
   Header file for Pin.cpp
 
 Pin.cpp
-  Source file which contains a class representing a raspberry pi GPIO-Pin
+  Source file which contains a class representing a raspberry pi GPIO-Pin and some basic functions
 
 main.cpp:
   Main programm
@@ -48,6 +48,7 @@ If you have done changes in the files run:
   make
   
 The Wiring Pi library is required to compile PiLitez: wiringpi.com/
+
 
 !!!
 
