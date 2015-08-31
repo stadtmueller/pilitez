@@ -26,6 +26,7 @@ class Music
     Music( int pins_[] );
     void jumpDual();
     void jumpRevDual();
+    void jumpRandomLights();
   private:
     int pins[ SIZE ];
 };

@@ -62,3 +62,13 @@ void Music::jumpRevDual()
   ix -= 2;
 }
 
+void Music::jumpRandomLights()
+{
+  static int lastIx = 0;
+
+  digitalWrite( pins[ lastIx ], LOW );
+
+  lastIx = random();
+
+  digitalWrite( pins[ lastIx ], HIGH );
+}
