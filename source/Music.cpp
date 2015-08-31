@@ -45,7 +45,7 @@ void Music::jumpDual()
 
 void Music::jumpRevDual()
 {
-    static int ix = SIZE + 1;
+  static int ix = SIZE + 1;
 
   digitalWrite( pins[ ix ], LOW );
   digitalWrite( pins[ ix - 1 ], LOW );
