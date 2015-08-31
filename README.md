@@ -3,7 +3,7 @@ Turn your Raspberry Pi into a 8-channel lighting console/colour organ with an ad
 
 On almost every major party these systems accompany the music with their light. This version uses a Raspberry Pi and an additional circuit that has to be build up either with LED's or with light bulbs in a bigger circuit.
 
-To start it simply run "sudo ./main" from the "source" folder.
+To start it simply run "sudo ./main" from the "compiled" folder.
   
 The software contains functions to switch the pins on or off in certain patterns and orders.
 
@@ -19,17 +19,23 @@ testLamps:
 testLamps.cpp:
   Source file of testLamps
   
-functions.h:
-  Header file for functions.cpp
+NoMusic.h:
+  Header file for NoMusic.cpp
   
-functions.cpp:
-  Source file which contains all the functions regardless of the music
+NoMusic.cpp:
+  Source file which contains a class with all the functions regardless of the music
   
-jumpFunctions.h
-  Header file for jumpFunctions.cpp
+Music.h
+  Header file for Music.cpp
 
-jumpFunctions.cpp
-  Source file which contains music-driven functions
+Music.cpp
+  Source file which contains a class with music-driven functions
+
+Pin.h
+  Header file for Pin.cpp
+
+Pin.cpp
+  Source file which contains a class representing a raspberry pi GPIO-Pin
 
 main.cpp:
   Main programm
@@ -39,7 +45,7 @@ main:
   
 
 If you have done changes in the files run:
-  g++ -Wall -o main main.cpp functions.cpp -lwiringPi -std=c++0x
+  make
   
 The Wiring Pi library is required to compile PiLitez: wiringpi.com/
 
