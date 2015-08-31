@@ -34,6 +34,18 @@ void initPins( int pins[] )
   cout << "Init done" << endl << endl;
 }
 
+long int random()
+{
+  random_device rd;
+  mt19937 eng( rd() );
+  uniform_int_distribution<> distr( 0, SIZE );
+  int num = distr( eng );
+  cout << num << " ";
+
+  return num;
+}
+
+
 
 Pin::Pin( int number ):
   number_( number )

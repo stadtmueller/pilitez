@@ -23,17 +23,6 @@ This file is part of PiLitez.
 
 using namespace std;
 
-long int random()
-{
-  random_device rd;
-  mt19937 eng( rd() );
-  uniform_int_distribution<> distr( 0, SIZE );
-  int num = distr( eng );
-  cout << num << " ";
-
-  return num;
-}
-
 NoMusic::NoMusic( int pins_[] )
 {
   for( int i = 0; i < SIZE; i++ )
