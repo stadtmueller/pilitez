@@ -21,7 +21,7 @@ This file is part of PiLitez.
 #define SIZE 8
 
 void initPins( int pins[] );
-long int random();
+long int myRandom();
 
 class Pin
 {

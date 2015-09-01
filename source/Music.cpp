@@ -17,6 +17,7 @@ This file is part of PiLitez.
 
 #include "Music.h"
 #include <wiringPi.h>
+#include "Pin.h"
 
 using namespace std;
 
@@ -68,7 +69,7 @@ void Music::jumpRandomLights()
 
   digitalWrite( pins[ lastIx ], LOW );
 
-  lastIx = random();
+  lastIx = myRandom();
 
   digitalWrite( pins[ lastIx ], HIGH );
 }

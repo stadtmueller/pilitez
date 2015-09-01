@@ -16,7 +16,6 @@ This file is part of PiLitez.
 */
 
 #include <iostream>
-#include <random>
 #include <wiringPi.h>
 #include "NoMusic.h"
 #include "Pin.h"
@@ -40,7 +39,7 @@ void NoMusic::randomLights( int cnt )
 
   while( i < cnt )
   {
-    randomNum = (int)random();
+    randomNum = (int)myRandom();
     if( randomNum == last )
       continue;
     else

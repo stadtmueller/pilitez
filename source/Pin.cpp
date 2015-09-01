@@ -18,6 +18,7 @@ This file is part of PiLitez.
 #include "Pin.h"
 #include <wiringPi.h>
 #include <iostream>
+#include <random>
 
 using namespace std;
 
@@ -34,7 +35,7 @@ void initPins( int pins[] )
   cout << "Init done" << endl << endl;
 }
 
-long int random()
+long int myRandom()
 {
   random_device rd;
   mt19937 eng( rd() );
