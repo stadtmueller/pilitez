@@ -37,7 +37,7 @@ int main()
   Music music = Music( pins );
   NoMusic noMusic = NoMusic( pins );
 
-  while( true )
+  while( false )
   {
     cout << "1: ";
     noMusic.dualLights2( 2 );
@@ -125,7 +125,17 @@ int main()
     }
     i = 0;
 
-  }
+    while( i < 10 )
+    {
+      if( ISHIGH )
+      {
+        music.jumpRandomLights();
+        delay( 100 );
+        i++;
+      }
+    }
 
+    i = 0;
+  }
   return 0;
 }
