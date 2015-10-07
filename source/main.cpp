@@ -34,7 +34,6 @@ int main()
 
   initPins( pins );
 
-  Music music = Music( pins );
   NoMusic noMusic = NoMusic( pins );
 
   while( false )
@@ -107,7 +106,7 @@ int main()
     {
       if( ISHIGH )
       {
-        music.jumpDual();
+        jumpDual();
         delay( 100 );
         i++;
       }
@@ -118,7 +117,7 @@ int main()
     {
       if( ISHIGH )
       {
-        music.jumpRevDual();
+        jumpRevDual();
         delay( 100 );
         i++;
       }
@@ -129,7 +128,7 @@ int main()
     {
       if( ISHIGH )
       {
-        music.jumpRandomLights();
+        jumpRandomLights();
         delay( 100 );
         i++;
       }
