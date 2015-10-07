@@ -20,14 +20,8 @@ This file is part of PiLitez.
 
 #define SIZE 8
 
-class Music
-{
-  public:
-    Music( int pins_[] );
-    void jumpDual();
-    void jumpRevDual();
-    void jumpRandomLights();
-  private:
-    int pins[ SIZE ];
-};
+void jumpDual();
+void jumpRevDual();
+void jumpRandomLights();
+
 #endif

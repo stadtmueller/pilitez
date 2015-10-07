@@ -21,13 +21,9 @@ This file is part of PiLitez.
 
 using namespace std;
 
-Music::Music( int pins_[] )
-{
-  for( int i = 0; i < SIZE; i++ )
-    this->pins[ i ] = pins_[ i ];
-}
+int pins[ SIZE ] = { 0, 2, 3, 21, 22, 23, 24, 25 };
 
-void Music::jumpDual()
+void jumpDual()
 {
   static int ix = -2;
 
@@ -44,7 +40,7 @@ void Music::jumpDual()
   ix += 2;
 }
 
-void Music::jumpRevDual()
+void jumpRevDual()
 {
   static int ix = SIZE + 1;
 
@@ -63,7 +59,7 @@ void Music::jumpRevDual()
   ix -= 2;
 }
 
-void Music::jumpRandomLights()
+void jumpRandomLights()
 {
   static int lastIx = 0;
 
