@@ -22,13 +22,7 @@ This file is part of PiLitez.
 
 using namespace std;
 
-NoMusic::NoMusic( int pins_[] )
-{
-  for( int i = 0; i < SIZE; i++ )
-    this->pins[ i ] = pins_[ i ];
-}
-
-void NoMusic::randomLights( int cnt )
+void randomLights( int cnt )
 {
   cout << "Random: ";
 
@@ -53,7 +47,7 @@ void NoMusic::randomLights( int cnt )
   cout << endl;
 }
 
-void NoMusic::dualLights2( int cnt )
+void dualLights2( int cnt )
 {
   cout << "Dual" << endl;
   int ix = 0;
@@ -77,7 +71,7 @@ void NoMusic::dualLights2( int cnt )
   }
 }
 
-void NoMusic::revDual( int cnt )
+void revDual( int cnt )
 {
   cout << "Rev-Dual" << endl;
   int ix = SIZE - 1;
@@ -103,7 +97,7 @@ void NoMusic::revDual( int cnt )
 
 
 
-void NoMusic::outIn2()
+void outIn2()
 {
   cout << "Outside Inside" << endl;
 
@@ -124,7 +118,7 @@ void NoMusic::outIn2()
   }
 }
 
-void NoMusic::inOut2()
+void inOut2()
 {
   cout << "Inside Outside" << endl;
   int ix = SIZE / 2;
@@ -144,7 +138,7 @@ void NoMusic::inOut2()
   }
 }
 
-void NoMusic::allOn()
+void allOn()
 {
   //cout << "All on" << endl;
 
@@ -152,7 +146,7 @@ void NoMusic::allOn()
     digitalWrite( pins[ i ], HIGH );
 }
 
-void NoMusic::allOf()
+void allOf()
 {
   //cout << "Alle off" << endl;
 
@@ -160,7 +154,7 @@ void NoMusic::allOf()
     digitalWrite( pins[ i ], LOW );
 }
 
-void NoMusic::knightRiderLights( int cnt )
+void knightRiderLights( int cnt )
 {
   cout << "Knight Rider" << endl;
 
@@ -188,7 +182,7 @@ void NoMusic::knightRiderLights( int cnt )
   }
 }
 
-void NoMusic::pattern1( long int millis )
+void pattern1( long int millis )
 {
   cout << "Pattern 1 @ " << millis << "ms" << endl;
 
@@ -206,7 +200,7 @@ void NoMusic::pattern1( long int millis )
   }
 }
 
-void NoMusic::revPattern1( long int millis /* = 400 */ )
+void revPattern1( long int millis /* = 400 */ )
 {
    cout << "Rev-Pattern 1 @ " << millis << "ms" << endl;
 
@@ -224,7 +218,7 @@ void NoMusic::revPattern1( long int millis /* = 400 */ )
   }
 }
 
-void NoMusic::pattern2( long int millis )
+void pattern2( long int millis )
 {
   cout << "Pattern 2 @ " << millis << "ms" << endl;
 
@@ -243,7 +237,7 @@ void NoMusic::pattern2( long int millis )
   }
 }
 
-void NoMusic::revPattern2( long int millis )
+void revPattern2( long int millis )
 {
   cout << "Rev-Pattern 2 @ " << millis << "ms" << endl;
 
@@ -262,7 +256,7 @@ void NoMusic::revPattern2( long int millis )
   }
 }
 
-void NoMusic::pattern3()
+void pattern3()
 {
   cout << "Pattern 3" << endl;
 
@@ -281,7 +275,7 @@ void NoMusic::pattern3()
   }
 }
 
-void NoMusic::revPattern3()
+void revPattern3()
 {
   cout << "Rev-Pattern 3" << endl;
 
@@ -300,7 +294,7 @@ void NoMusic::revPattern3()
   }
 }
 
-void NoMusic::strobe( int cnt )
+void strobe( int cnt )
 {
   cout << "Strobe" << endl;
 
@@ -316,7 +310,7 @@ void NoMusic::strobe( int cnt )
   }
 }
 
-void NoMusic::vu( int cnt )
+void vu( int cnt )
 {
   cout << "VU" << endl;
 
@@ -350,7 +344,7 @@ void NoMusic::vu( int cnt )
   }
 }
 
-void NoMusic::blueStrobe( int cnt )
+void blueStrobe( int cnt )
 {
   cout << "Blue Strobe" << endl;
 
@@ -367,7 +361,7 @@ void NoMusic::blueStrobe( int cnt )
   }
 }
 
-void NoMusic::greenStrobe( int cnt )
+void greenStrobe( int cnt )
 {
   cout << "Green Strobe" << endl;
 
@@ -384,7 +378,7 @@ void NoMusic::greenStrobe( int cnt )
   }
 }
 
-void NoMusic::yellowStrobe( int cnt )
+void yellowStrobe( int cnt )
 {
   cout << "Yellow Strobe" << endl;
   int i = 0;
@@ -400,7 +394,7 @@ void NoMusic::yellowStrobe( int cnt )
   }
 }
 
-void NoMusic::redStrobe( int cnt )
+void redStrobe( int cnt )
 {
   cout << "Red Strobe" << endl;
 
