@@ -19,5 +19,5 @@ NoMusic.o: NoMusic.cpp Pin.cpp
 Pin.o: Pin.cpp Pin.h
 	$(CC) $(FLAGS) -c Pin.cpp
 
-clean:
-	rm -rf *o main
+cleanO:
+	rm *.o
