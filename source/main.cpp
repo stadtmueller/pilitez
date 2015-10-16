@@ -32,8 +32,6 @@ int main()
 
   initPins( pins );
 
-  NoMusic noMusic = NoMusic( pins );
-
   while( false )
   {
     cout << "1: ";
