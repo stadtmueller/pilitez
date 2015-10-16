@@ -18,8 +18,6 @@ This file is part of PiLitez.
 #ifndef JUMPFUNCTIONS_H
 #define JUMPFUNCTIONS_H
 
-#define SIZE 8
-
 void jumpDual();
 void jumpRevDual();
 void jumpRandomLights();
