@@ -20,6 +20,7 @@ This file is part of PiLitez.
 #include "Pin.h"
 #include <iostream>
 #include <wiringPi.h>
+#include <vector>
 
 
 #define ISHIGH digitalRead( 29 ) > 0
@@ -32,7 +33,7 @@ int main()
 
   initPins( pins );
 
-  while( false )
+  while( true )
   {
     cout << "1: ";
     dualLights2( 2 );

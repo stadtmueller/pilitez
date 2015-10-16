@@ -18,11 +18,13 @@ This file is part of PiLitez.
 #ifndef PIN_H
 #define PIN_H
 
+#include <vector>
+
 #define SIZE 8
 
-int pins[ SIZE ];
+extern std::vector<int> pins;
 
-void initPins( int pins[] );
+void initPins( std::vector <int> pins );
 long int myRandom();
 
 class Pin

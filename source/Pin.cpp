@@ -16,16 +16,18 @@ This file is part of PiLitez.
 */
 
 #include "Pin.h"
+#include <cstdlib>
 #include <wiringPi.h>
 #include <iostream>
 #include <random>
+#include <vector>
 
 using namespace std;
 
-pins = {  0, 2, 3, 21, 22, 23, 24, 25 };
+vector<int> pins = { 0, 2, 3, 21, 22, 23, 24, 25 };
 
 
-void initPins( int pins[] )
+void initPins( vector<int> pins )
 {
   cout << "Init..." << endl;
 
