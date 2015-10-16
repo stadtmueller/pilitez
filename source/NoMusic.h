@@ -18,8 +18,6 @@ This file is part of PiLitez.
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
 
-#define SIZE 8
-
 void randomLights( int cnt );
 void dualLights2( int cnt );
 void revDual( int cnt );
