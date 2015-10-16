@@ -24,8 +24,8 @@ This file is part of PiLitez.
 
 using namespace std;
 
-vector<int> pins = { 0, 2, 3, 21, 22, 23, 24, 25 };
-
+vector<int> integerPins = { 0, 2, 3, 21, 22, 23, 24, 25 };
+vector<Pin> pins = initPins( integerPins );
 
 vector<Pin> initPins( vector<int> pins )
 {
@@ -37,7 +37,7 @@ vector<Pin> initPins( vector<int> pins )
   vector<Pin> initPins;
 
   for( int i = 0; i < SIZE; i++ )
-    initPins.push_back( Pin( pins[ i ] ) );// <-- Add "Pin"-call here and buffer it in array
+    initPins.push_back( Pin( integerPins[ i ] ) );// <-- Add "Pin"-call here and buffer it in array
 
   cout << "Init done" << endl << endl;
 
