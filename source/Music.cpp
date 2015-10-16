@@ -30,11 +30,11 @@ void jumpDual()
     ix = 0;
   }
 
-  digitalWrite( pins[ ix ], LOW );
-  digitalWrite( pins[ ix + 1 ], LOW );
+  pins[ ix ].set( LOW );
+  pins[ ix + 1 ].set( LOW );
 
-  digitalWrite( pins[ ix + 2 ], HIGH );
-  digitalWrite( pins[ ix + 3 ], HIGH );
+  pins[ ix + 2 ].set( HIGH );
+  pins[ ix + 3 ].set( HIGH );
   ix += 2;
 }
 
@@ -42,11 +42,11 @@ void jumpRevDual()
 {
   static int ix = SIZE + 1;
 
-  digitalWrite( pins[ ix ], LOW );
-  digitalWrite( pins[ ix - 1 ], LOW );
+  pins[ ix ].set( LOW );
+  pins[ ix - 1 ].set( LOW );
 
-  digitalWrite( pins[ ix - 2 ], HIGH );
-  digitalWrite( pins[ ix - 3 ], HIGH );
+  pins[ ix - 2 ].set( HIGH );
+  pins[ ix - 3 ].set( HIGH );
 
 
   if( ix == 1 )
@@ -61,9 +61,9 @@ void jumpRandomLights()
 {
   static int lastIx = 0;
 
-  digitalWrite( pins[ lastIx ], LOW );
+  pins[ lastIx ].set( LOW );
 
   lastIx = myRandom();
 
-  digitalWrite( pins[ lastIx ], HIGH );
+  pins[ lastIx ].set( HIGH );
 }
