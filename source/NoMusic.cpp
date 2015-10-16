@@ -28,7 +28,6 @@ void randomLights( int cnt )
 
   int randomNum = 0;
   int last = 0;
-  int currentPin = 0;
   int i = 0;
 
   while( i < cnt )
@@ -37,12 +36,13 @@ void randomLights( int cnt )
     if( randomNum == last )
       continue;
     else
-      currentPin = pins[ randomNum ];
-    digitalWrite( currentPin, HIGH );
-    delay( 400 );
-    digitalWrite( currentPin, LOW );
-    last = randomNum;
-    i++;
+    {
+      pins[ randomNum ].set( HIGH );
+      delay( 400 );
+      pins[ randomNum ].set( LOW );
+      last = randomNum;
+      i++;
+    }
   }
   cout << endl;
 }
@@ -57,13 +57,13 @@ void dualLights2( int cnt )
   {
     while( ix < SIZE )
     {
-      digitalWrite( pins[ ix ], HIGH );
-      digitalWrite( pins[ ix + 1 ], HIGH );
+      pins[ ix ].set( HIGH );
+      pins[ ix + 1 ].set( HIGH );
 
       delay( 800 );
 
-      digitalWrite( pins[ ix ], LOW );
-      digitalWrite( pins[ ix + 1 ], LOW );
+      pins[ ix ].set( LOW );
+      pins[ ix + 1 ].set( LOW );
       ix += 2;
     }
     ix = 0;
@@ -81,13 +81,13 @@ void revDual( int cnt )
   {
     while( ix > 0 )
     {
-      digitalWrite( pins[ ix ], HIGH );
-      digitalWrite( pins[ ix - 1 ], HIGH );
+      pins[ ix ].set( HIGH );
+      pins[ ix - 1 ].set( HIGH );
 
       delay( 800 );
 
-      digitalWrite( pins[ ix ], LOW );
-      digitalWrite( pins[ ix - 1 ], LOW );
+      pins[ ix ].set( LOW );
+      pins[ ix - 1 ].set( LOW );
       ix -= 2;
     }
     ix = SIZE - 1;
@@ -106,13 +106,13 @@ void outIn2()
 
   while( ix < ( SIZE / 2 ) )
   {
-    digitalWrite( pins[ ix ], HIGH );
-    digitalWrite( pins[ ix2 ], HIGH );
+    pins[ ix ].set( HIGH );
+    pins[ ix2 ].set( HIGH );
 
     delay( 400 );
 
-    digitalWrite( pins[ ix ], LOW );
-    digitalWrite( pins[ ix2 ], LOW );
+    pins[ ix ].set( LOW );
+    pins[ ix2 ].set( LOW );
     ix++;
     ix2--;
   }
@@ -126,13 +126,13 @@ void inOut2()
 
   while( ix < SIZE )
   {
-    digitalWrite( pins[ ix ], HIGH );
-    digitalWrite( pins[ ix2 ], HIGH );
+    pins[ ix ].set( HIGH );
+    pins[ ix2 ].set( HIGH );
 
     delay( 400 );
 
-    digitalWrite( pins[ ix ], LOW );
-    digitalWrite( pins[ ix2 ], LOW );
+    pins[ ix ].set( LOW );
+    pins[ ix2 ].set( LOW );
     ix++;
     ix2--;
   }
@@ -143,7 +143,7 @@ void allOn()
   //cout << "All on" << endl;
 
   for( int i = 0; i < SIZE; i++ )
-    digitalWrite( pins[ i ], HIGH );
+    pins[ i ].set( HIGH );
 }
 
 void allOf()
@@ -151,7 +151,7 @@ void allOf()
   //cout << "Alle off" << endl;
 
   for( int i = 0; i < SIZE; i++ )
-    digitalWrite( pins[ i ], LOW );
+    pins[ i ].set( LOW );
 }
 
 void knightRiderLights( int cnt )
@@ -164,19 +164,19 @@ void knightRiderLights( int cnt )
   {
     for( int j = 0; j < SIZE - 1; j++ )
     {
-      digitalWrite( pins[ j ], HIGH );
+      pins[ j ].set( HIGH );
       delay( 200 );
       if( j != 8 )
-        digitalWrite( pins[ j ], LOW );
+        pins[ j ].set( LOW );
     }
 
-    digitalWrite( pins[ SIZE ], LOW );
+    pins[ SIZE ].set( LOW );
 
     for( int i = SIZE - 1; i >= 0; i-- )
     {
-      digitalWrite( pins[ i ], HIGH );
+      pins[ i ].set( HIGH );
       delay( 200 );
-      digitalWrite( pins[ i ], LOW );
+      pins[ i ].set( LOW );
     }
     i++;
   }
@@ -190,13 +190,13 @@ void pattern1( long int millis )
 
   for( int i = 0; i <= max / 2; i++ )
   {
-    digitalWrite( pins[ 0 + i ], HIGH );
+    pins[ 0 + i ].set( HIGH );
     delay( millis );
-    digitalWrite( pins[ 0 + i ], LOW );
+    pins[ 0 + i ].set( LOW );
 
-    digitalWrite( pins[ max - i ], HIGH );
+    pins[ max - i ].set( HIGH );
     delay( millis );
-    digitalWrite( pins[ max - i ], LOW );
+    pins[ max - i ].set( LOW );
   }
 }
 
@@ -208,13 +208,13 @@ void revPattern1( long int millis /* = 400 */ )
 
   for( int i = max / 2; i >= 0; i-- )
   {
-    digitalWrite( pins[ max - i ], HIGH );
+    pins[ max - i ].set( HIGH );
     delay( millis );
-    digitalWrite( pins[ max - i ], LOW );
+    pins[ max - i ].set( LOW );
 
-    digitalWrite( pins[ 0 + i ], HIGH );
+    pins[ 0 + i ].set( HIGH );
     delay( millis );
-    digitalWrite( pins[ 0 + i ], LOW );
+    pins[ 0 + i ].set( LOW );
   }
 }
 
@@ -227,11 +227,11 @@ void pattern2( long int millis )
 
   while( i < SIZE )
   {
-    digitalWrite( pins[ j ], HIGH );
-    digitalWrite( pins[ i ], HIGH );
+    pins[ j ].set( HIGH );
+    pins[ i ].set( HIGH );
     delay( millis );
-    digitalWrite( pins[ j ], LOW );
-    digitalWrite( pins[ i ], LOW );
+    pins[ j ].set( LOW );
+    pins[ i ].set( LOW );
     j++;
     i++;
   }
@@ -246,11 +246,11 @@ void revPattern2( long int millis )
 
   while( i >= 0 )
   {
-    digitalWrite( pins[ j ], HIGH );
-    digitalWrite( pins[ i ], HIGH );
+    pins[ j ].set( HIGH );
+    pins[ i ].set( HIGH );
     delay( millis );
-    digitalWrite( pins[ j ], LOW );
-    digitalWrite( pins[ i ], LOW );
+    pins[ j ].set( LOW );
+    pins[ i ].set( LOW );
     j--;
     i--;
   }
@@ -264,13 +264,13 @@ void pattern3()
 
   while( ix <= SIZE )
   {
-    digitalWrite( pins[ ix ], HIGH );
-    digitalWrite( pins[ ix + 1], HIGH );
+    pins[ ix ].set( HIGH );
+    pins[ ix + 1].set( HIGH );
 
     delay( 400 );
 
-    digitalWrite( pins[ ix ], LOW );
-    digitalWrite( pins[ ix + 1 ], LOW );
+    pins[ ix ].set( LOW );
+    pins[ ix + 1 ].set( LOW );
     ix++;
   }
 }
@@ -283,13 +283,13 @@ void revPattern3()
 
   while( ix >= -1 )
   {
-     digitalWrite( pins[ ix ], HIGH );
-     digitalWrite( pins[ ix - 1 ], HIGH );
+     pins[ ix ].set( HIGH );
+     pins[ ix - 1 ].set( HIGH );
 
      delay( 400 );
 
-     digitalWrite( pins[ ix ], LOW );
-     digitalWrite( pins[ ix - 1], LOW );
+     pins[ ix ].set( LOW );
+     pins[ ix - 1].set( LOW );
      ix--;
   }
 }
@@ -325,8 +325,8 @@ void vu( int cnt )
 
     while( ix >= 0 )
     {
-      digitalWrite( pins[ ix ], HIGH );
-      digitalWrite( pins[ ix2 ], HIGH );
+      pins[ ix ].set( HIGH );
+      pins[ ix2 ].set( HIGH );
       delay( 100 );
       ix--;
       ix2++;
@@ -334,8 +334,8 @@ void vu( int cnt )
 
     while( ix2 >= (SIZE / 2) )
     {
-      digitalWrite( pins[ ix ], LOW );
-      digitalWrite( pins[ ix2 ], LOW );
+      pins[ ix ].set( LOW );
+      pins[ ix2 ].set( LOW );
       delay( 100 );
       ix2--;
       ix++;
@@ -351,11 +351,11 @@ void blueStrobe( int cnt )
   int i = 0;
   while( i < cnt )
   {
-    digitalWrite( pins[ 3 ], HIGH );
-    digitalWrite( pins[ 4 ], HIGH );
+    pins[ 3 ].set( HIGH );
+    pins[ 4 ].set( HIGH );
     delay( 100 );
-    digitalWrite( pins[ 3 ], LOW );
-    digitalWrite( pins[ 4 ], LOW );
+    pins[ 3 ].set( LOW );
+    pins[ 4 ].set( LOW );
     delay( 100 );
     i++;
   }
@@ -368,11 +368,11 @@ void greenStrobe( int cnt )
   int i = 0;
   while( i < cnt )
   {
-    digitalWrite( pins[ 2 ], HIGH );
-    digitalWrite( pins[ 5 ], HIGH );
+    pins[ 2 ].set( HIGH );
+    pins[ 5 ].set( HIGH );
     delay( 100 );
-    digitalWrite( pins[ 2 ], LOW );
-    digitalWrite( pins[ 5 ], LOW );
+    pins[ 2 ].set( LOW );
+    pins[ 5 ].set( LOW );
     delay( 100 );
     i++;
   }
@@ -384,11 +384,11 @@ void yellowStrobe( int cnt )
   int i = 0;
   while( i < cnt )
   {
-    digitalWrite( pins[ 1 ], HIGH );
-    digitalWrite( pins[ 6 ], HIGH );
+    pins[ 1 ].set( HIGH );
+    pins[ 6 ].set( HIGH );
     delay( 100 );
-    digitalWrite( pins[ 1 ], LOW );
-    digitalWrite( pins[ 6 ], LOW );
+    pins[ 1 ].set( LOW );
+    pins[ 6 ].set( LOW );
     delay( 100 );
     i++;
   }
@@ -401,11 +401,11 @@ void redStrobe( int cnt )
   int i = 0;
   while( i < cnt )
   {
-    digitalWrite( pins[ 0 ], HIGH );
-    digitalWrite( pins[ 7 ], HIGH );
+    pins[ 0 ].set( HIGH );
+    pins[ 7 ].set( HIGH );
     delay( 100 );
-    digitalWrite( pins[ 0 ], LOW );
-    digitalWrite( pins[ 7 ], LOW );
+    pins[ 0 ].set( LOW );
+    pins[ 7 ].set( LOW );
     delay( 100 );
     i++;
   }
