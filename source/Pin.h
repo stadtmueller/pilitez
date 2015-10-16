@@ -20,6 +20,8 @@ This file is part of PiLitez.
 
 #define SIZE 8
 
+int pins[ SIZE ];
+
 void initPins( int pins[] );
 long int myRandom();
 

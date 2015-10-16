@@ -21,7 +21,7 @@ This file is part of PiLitez.
 #include <iostream>
 #include <wiringPi.h>
 
-#define SIZE 8
+
 #define ISHIGH digitalRead( 29 ) > 0
 
 using namespace std;
@@ -30,8 +30,6 @@ int main()
 {
   cout << "This program is licensed under GNU GPL. See http://www.gnu.org/licenses/#GPL for more informations" << endl;
 
-  int pins[ SIZE ] = { 0, 2, 3, 21, 22, 23, 24, 25 };
-
   initPins( pins );
 
   NoMusic noMusic = NoMusic( pins );
@@ -39,61 +37,61 @@ int main()
   while( false )
   {
     cout << "1: ";
-    noMusic.dualLights2( 2 );
+    dualLights2( 2 );
 
     cout << "2: ";
-    noMusic.outIn2();
+    outIn2();
 
     cout << "3: ";
-    noMusic.strobe( 5 );
+    strobe( 5 );
 
     cout << "4: ";
-    noMusic.inOut2();
+    inOut2();
 
     cout << "5: ";
-    noMusic.randomLights( 15 );
+    randomLights( 15 );
 
     cout << "6: ";
-    noMusic.pattern1();
+    pattern1();
 
     cout << "7: ";
-    noMusic.pattern1( 200 );
+    pattern1( 200 );
 
     cout << "8: ";
-    noMusic.pattern2();
+    pattern2();
 
     cout << "9: ";
-    noMusic.revDual( 2 );
+    revDual( 2 );
 
     cout << "10: ";
-    noMusic.revPattern1();
+    revPattern1();
 
     cout << "11: ";
-    noMusic.revPattern2();
+    revPattern2();
 
     cout << "12: ";
-    noMusic.pattern3();
+    pattern3();
 
     cout << "13: ";
-    noMusic.revPattern3();
+    revPattern3();
 
     cout << "14: ";
-    noMusic.knightRiderLights( 3 );
+    knightRiderLights( 3 );
 
     cout << "15: ";
-    noMusic.vu( 2 );
+    vu( 2 );
 
     cout << "16: ";
-    noMusic.redStrobe( 4 );
+    redStrobe( 4 );
 
     cout << "17: ";
-    noMusic.blueStrobe( 4 );
+    blueStrobe( 4 );
 
     cout << "18: ";
-    noMusic.greenStrobe( 4 );
+    greenStrobe( 4 );
 
     cout << "19: ";
-    noMusic.yellowStrobe( 4 );
+    yellowStrobe( 4 );
 
     cout << "----------------------------" << endl;
   }
