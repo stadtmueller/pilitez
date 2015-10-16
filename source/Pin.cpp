@@ -24,16 +24,16 @@ This file is part of PiLitez.
 
 using namespace std;
 
-vector<int> integerPins = { 0, 2, 3, 21, 22, 23, 24, 25 };
-vector<Pin> pins = initPins( integerPins );
-
-vector<Pin> initPins( vector<int> pins )
+vector<Pin> initPins()
 {
   cout << "Init..." << endl;
 
   wiringPiSetup();
-  system( "gpio edge 29 rising" );
 
+  system( "gpio edge 29 rising" );
+  inputPin = 29;
+
+  vector<int> integerPins = { 0, 2, 3, 21, 22, 23, 24, 25 };
   vector<Pin> initPins;
 
   for( int i = 0; i < SIZE; i++ )

@@ -23,7 +23,7 @@ This file is part of PiLitez.
 #include <vector>
 
 
-#define ISHIGH digitalRead( 29 ) > 0
+#define ISHIGH digitalRead( inputPin )
 
 using namespace std;
 
@@ -31,7 +31,7 @@ int main()
 {
   cout << "This program is licensed under GNU GPL. See http://www.gnu.org/licenses/#GPL for more informations" << endl;
 
-  initPins( pins );
+  pins = initPins();
 
   while( true )
   {
