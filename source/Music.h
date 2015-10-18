@@ -18,8 +18,17 @@ This file is part of PiLitez.
 #ifndef JUMPFUNCTIONS_H
 #define JUMPFUNCTIONS_H
 
-void jumpDual();
-void jumpRevDual();
-void jumpRandomLights();
+#include <vector>
+
+class Music
+{
+  public:
+    Music( std::vector<int> pins_ );
+    void jumpDual();
+    void jumpRevDual();
+    void jumpRandomLights();
+  private:
+    std::vector<int> pins;
+};
 
 #endif
