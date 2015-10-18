@@ -22,9 +22,6 @@ This file is part of PiLitez.
 
 #define SIZE 8
 
-std::vector<Pin> initPins();
-long int myRandom();
-
 class Pin
 {
   public:
@@ -36,5 +33,10 @@ class Pin
     int number_;
     bool state;
 };
+
+
+std::vector<Pin> initPins();
+long int myRandom();
+
 
 #endif

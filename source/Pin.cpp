@@ -24,7 +24,7 @@ This file is part of PiLitez.
 
 using namespace std;
 
-vector<Pin> initPins()
+std::vector<Pin> initPins()
 {
   cout << "Init..." << endl;
 
