@@ -21,7 +21,7 @@ This file is part of PiLitez.
 
 using namespace std;
 
-Music::Music( std::vector<int> pins_ ):
+Music::Music( std::vector<Pin> pins_ ):
   pins( pins_ );
   {}
 

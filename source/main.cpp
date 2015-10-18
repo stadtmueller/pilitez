@@ -31,7 +31,7 @@ int main()
 {
   cout << "This program is licensed under GNU GPL. See http://www.gnu.org/licenses/#GPL for more informations" << endl;
 
-  std::vector<int> pins = initPins();
+  std::vector<Pin> pins = initPins();
 
   Music music( pins );
   NoMusic noMusic( pins );

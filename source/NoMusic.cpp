@@ -22,7 +22,7 @@ This file is part of PiLitez.
 
 using namespace std;
 
-NoMusic( std::vector<int> pins_ ):
+NoMusic( std::vector<Pin> pins_ ):
   pins( pins_ )
   {}
 

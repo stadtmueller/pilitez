@@ -23,7 +23,7 @@ This file is part of PiLitez.
 class Music
 {
   public:
-    Music( std::vector<int> pins_ );
+    Music( std::vector<Pin> pins_ );
     void jumpDual();
     void jumpRevDual();
     void jumpRandomLights();

@@ -23,7 +23,7 @@ This file is part of PiLitez.
 class NoMusic
 {
   public:
-    NoMusic( std::vector<int> pins_ );
+    NoMusic( std::vector<Pin> pins_ );
     void randomLights( int cnt );
     void dualLights2( int cnt );
     void revDual( int cnt );
