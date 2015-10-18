@@ -21,7 +21,12 @@ This file is part of PiLitez.
 
 using namespace std;
 
-void jumpDual()
+Music::Music( std::vector<int> pins_ ):
+  pins( pins_ );
+  {}
+
+
+void Music::jumpDual()
 {
   static int ix = -2;
 
@@ -38,7 +43,7 @@ void jumpDual()
   ix += 2;
 }
 
-void jumpRevDual()
+void Music::jumpRevDual()
 {
   static int ix = SIZE + 1;
 
@@ -57,7 +62,7 @@ void jumpRevDual()
   ix -= 2;
 }
 
-void jumpRandomLights()
+void Music::jumpRandomLights()
 {
   static int lastIx = 0;
 
