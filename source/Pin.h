@@ -22,9 +22,6 @@ This file is part of PiLitez.
 
 #define SIZE 8
 
-extern std::vector<Pin> pins;
-int inputPin;
-
 std::vector<Pin> initPins();
 long int myRandom();
 
