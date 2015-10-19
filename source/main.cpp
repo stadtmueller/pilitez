@@ -36,9 +36,7 @@ int main()
   Music music( pins );
   NoMusic noMusic( pins );
 
-  noMusic.toggledRandom( 15 );
-
-  while( false )
+  while( true )
   {
     cout << "1: ";
     noMusic.dualLights2( 2 );
