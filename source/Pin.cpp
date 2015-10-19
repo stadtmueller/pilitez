@@ -74,18 +74,20 @@ bool Pin::getState()
   return this->state;
 }
 
-void Pin::set( bool high )
+void Pin::set( bool isHigh )
 {
-  if( high )
+  if( isHigh )
     digitalWrite( this->number_, HIGH );
   else
     digitalWrite( this->number_, LOW );
+
+  this -> state = isHigh;
 }
 
 void Pin::toggle()
 {
-  if( this -> getState() == HIGH )
-    this -> set( LOW );
-  else
-    this -> set( HIGH );
+  if( this -> state == true )
+    this -> set( false );
+  if( this -> state == false )
+    this -> set( true );
 }

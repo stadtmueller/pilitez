@@ -425,7 +425,7 @@ void NoMusic::toggledRandom( int cnt )
 
   while( i < cnt )
   {
-    pin = (int)myRandom();
+    pin = 0;
 
     pins[ pin ].toggle();
 
