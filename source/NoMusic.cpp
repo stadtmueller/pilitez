@@ -429,6 +429,8 @@ void NoMusic::toggledRandom( int cnt )
 
     pins[ pin ].toggle();
 
+    delay( 400 );
+
     i++;
   }
 
