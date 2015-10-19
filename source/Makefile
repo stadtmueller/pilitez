@@ -21,3 +21,6 @@ Pin.o: Pin.cpp Pin.h
 
 cleanO:
 	rm *.o
+
+clean: 
+        rm *.o main
