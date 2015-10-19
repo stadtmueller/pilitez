@@ -81,3 +81,11 @@ void Pin::set( bool high )
   else
     digitalWrite( this->number_, LOW );
 }
+
+void Pin::toggle()
+{
+  if( this -> getState() == HIGH )
+    this -> set( LOW );
+  else
+    this -> set( HIGH );
+}
