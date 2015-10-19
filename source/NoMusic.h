@@ -45,6 +45,7 @@ class NoMusic
     void yellowStrobe( int cnt );
     void redStrobe( int cnt );
     void vu( int cnt );
+    void toggledRandom( int cnt );
   private:
     std::vector<Pin> pins;
 };

@@ -415,3 +415,23 @@ void NoMusic::redStrobe( int cnt )
     i++;
   }
 }
+
+void NoMusic::toggledRandom( int cnt )
+{
+  cout << "Toggled Random" << endl;
+
+  int pin = 0;
+  int i = 0;
+
+  while( i < cnt )
+  {
+    pin = (int)myRandom();
+
+    pins[ pin ].toggle();
+
+    i++;
+  }
+
+  for( Pin p : pins )
+    p.set( false );
+}
