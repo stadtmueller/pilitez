@@ -19,6 +19,7 @@ This file is part of PiLitez.
 #define JUMPFUNCTIONS_H
 
 #include <vector>
+#include "Pin.h"
 
 class Music
 {
@@ -28,7 +29,7 @@ class Music
     void jumpRevDual();
     void jumpRandomLights();
   private:
-    std::vector<int> pins;
+    std::vector<Pin> pins;
 };
 
 #endif

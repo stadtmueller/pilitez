@@ -31,7 +31,6 @@ std::vector<Pin> initPins()
   wiringPiSetup();
 
   system( "gpio edge 29 rising" );
-  inputPin = 29;
 
   vector<int> integerPins = { 0, 2, 3, 21, 22, 23, 24, 25 };
   vector<Pin> initPins;

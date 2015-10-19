@@ -19,6 +19,7 @@ This file is part of PiLitez.
 #define FUNCTIONS_H
 
 #include <vector>
+#include "Pin.h"
 
 class NoMusic
 {
@@ -45,7 +46,7 @@ class NoMusic
     void redStrobe( int cnt );
     void vu( int cnt );
   private:
-    std::vector<int> pins;
+    std::vector<Pin> pins;
 };
 
 #endif
