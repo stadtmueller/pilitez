@@ -425,7 +425,7 @@ void NoMusic::toggledRandom( int cnt )
 
   while( i < cnt )
   {
-    pin = 0;
+    pin = (int)myRandom();
 
     pins[ pin ].toggle();
 
@@ -434,6 +434,5 @@ void NoMusic::toggledRandom( int cnt )
     i++;
   }
 
-  for( Pin p : pins )
-    p.set( false );
+  allOf();
 }
