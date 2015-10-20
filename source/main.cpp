@@ -95,6 +95,9 @@ int main()
     cout << "19: ";
     noMusic.yellowStrobe( 4 );
 
+    cout << "20: ";
+    noMusic.toggledRandom( 15 );
+
     cout << "----------------------------" << endl;
   }
 
