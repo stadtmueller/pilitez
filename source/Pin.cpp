@@ -88,6 +88,6 @@ void Pin::toggle()
 {
   if( this -> state == true )
     this -> set( false );
-  if( this -> state == false )
+  else if( this -> state == false )
     this -> set( true );
 }
