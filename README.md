@@ -59,3 +59,6 @@ Please note that the binary files in the "compiled/" folder are examples and oft
 If you've downloaded the repo, go to the source folder and compile it with the command above.
 
 !!!
+
+Contact:
+  E-Mail: stadtmuellertim@gmail.com
