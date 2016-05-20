@@ -33,6 +33,13 @@ int main()
 
   std::vector<Pin> pins = initPins();
 
+  cout << "Pins that will be used: ";
+
+  for( Pin p : pins )
+    cout << p.getNumber() << " ";
+
+  cout << endl;
+
   Music music( pins );
   NoMusic noMusic( pins );
 
