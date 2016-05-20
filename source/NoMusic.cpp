@@ -418,7 +418,7 @@ void NoMusic::redStrobe( int cnt )
 
 void NoMusic::toggledRandom( int cnt )
 {
-  cout << "Toggled Random";
+  cout << "Toggled Random: ";
 
   int pin = 0;
   int i = 0;

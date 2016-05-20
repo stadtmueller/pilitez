@@ -51,6 +51,7 @@ long int myRandom()
   uniform_int_distribution<> distr( 0, SIZE );
   int num = distr( eng );
   cout << num << " ";
+  cout.flush();
 
   return num;
 }
