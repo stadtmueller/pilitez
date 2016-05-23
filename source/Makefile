@@ -21,3 +21,7 @@ Pin.o: Pin.cpp Pin.h
 
 clean:
 	rm *.o main
+
+cleansourcedir:
+	rm *.o
+	mv main compiled/

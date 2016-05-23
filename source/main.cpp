@@ -22,7 +22,6 @@ This file is part of PiLitez.
 #include <wiringPi.h>
 #include <vector>
 
-
 #define ISHIGH digitalRead( inputPin )
 
 using namespace std;
