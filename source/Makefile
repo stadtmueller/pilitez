@@ -1,27 +1,27 @@
-CC=g++
-FLAGS=-Wall -lwiringPi -std=c++0x
-
+CXX=g++
+FLAGS=-Wall -std=c++0x
+LDFLAGS=-lwiringPi
 
 all: main
 
 main: main.o Music.o NoMusic.o Pin.o
-	$(CC) $(FLAGS) -o main main.o Music.o NoMusic.o Pin.o
+	$(CXX) $(FLAGS) $(LDFLAGS) -o main main.o Music.o NoMusic.o Pin.o
 
 main.o: main.cpp
-	$(CC) $(FLAGS) -c main.cpp
+	$(CXX) $(FLAGS) -c main.cpp
 
 Music.o: Music.cpp Music.h
-	$(CC) $(FLAGS) -c Music.cpp
+	$(CXX) $(FLAGS) -c Music.cpp
 
 NoMusic.o: NoMusic.cpp NoMusic.h
-	$(CC) $(FLAGS) -c NoMusic.cpp
+	$(CXX) $(FLAGS) -c NoMusic.cpp
 
 Pin.o: Pin.cpp Pin.h
-	$(CC) $(FLAGS) -c Pin.cpp
+	$(CXX) $(FLAGS) -c Pin.cpp
 
 clean:
-	rm *.o main
+	rm -f *.o main
 
 cleansourcedir:
-	rm *.o
+	rm -f *.o
 	mv main compiled/
